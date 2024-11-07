@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сбор патруля</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Сбор патруля</h1>
+        <label for="participants">Введите участников через запятую:</label>
+        <div class="input-container">
+            <input type="text" id="participants" placeholder="Имя1, имя2, имя3...">
+            <button id="submitParticipants" class="button">Ввести</button>
+        </div>
+
+        <div id="selectLeadersAndResponsibles" class="hidden">
+            <h2>Выберите ведущих (2) и ответственных:</h2>
+            <div id="participantList" class="participant-container"></div>
+            <button id="assemblePatrol" class="button hidden">Собрать патруль</button>
+        </div>
+
+        <div id="patrolOutput" class="hidden">
+            <h2>Результат сбора патруля</h2>
+            <pre id="patrolResult" class="output"></pre>
+            <button id="createReport" class="button">Составить отчет</button>
+        </div>
+
+        <div id="reportOutput" class="hidden">
+            <h2>Отчет о патруле</h2>
+            <label for="timeOfDay">Выберите время суток:</label>
+            <select id="timeOfDay">
+                <option value="Утро">Утро</option>
+                <option value="День">День</option>
+                <option value="Вечер">Вечер</option>
+                <option value="Ночь">Ночь</option>
+            </select>
+            <button id="generateReport" class="button">Создать отчет</button>
+            <pre id="reportResult" class="output"></pre>
+        </div>
+    </div>
+    <footer>Создано Бедокуром</footer>
+    <script src="script.js"></script>
+</body>
+</html>
